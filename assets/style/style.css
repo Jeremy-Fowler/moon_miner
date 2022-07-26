@@ -1,0 +1,51 @@
+/* BASIC STYLES HERE */
+.bungee{
+  font-family: 'Bungee', cursive;
+}
+
+.bg-image{
+  background-image: url('../img/Nebula-1\ 1.png');
+  background-size: cover;
+}
+
+h1{
+  text-shadow: 0vh .5vh #FCBA0F;
+  font-size: 6vh;
+}
+
+.moon{
+  user-select: none;
+  cursor: pointer;
+  filter: drop-shadow(0 0 30px #fff89a) drop-shadow( 20px 20px 80px #fc9aff );
+  transition: .3s ease-in-out; 
+}
+
+.moon:hover{
+  transform: scale(1.05);
+}
+
+.moon:active{
+  transform: scale(.9);
+}
+
+.cheese{
+  font-size: 5vh;
+}
+.stats{
+  font-size: 3vh;
+}
+
+.rounded-top-start{
+  border-top-left-radius: .5em;
+}
+.rounded-top-end{
+  border-top-right-radius: .5em;
+}
+
+button{
+  width: 7vw;
+}
+
+.grow{
+  height: 100%;
+}
