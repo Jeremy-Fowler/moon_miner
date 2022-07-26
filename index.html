@@ -32,7 +32,7 @@
     <div class="container-fluid">
       <div class="row justify-content-center">
         <div class="col-5 d-flex justify-content-center">
-          <img src="../assets/img/swiss-moon 1.png" alt="" class="img-fluid moon">
+          <img onclick="app.cheeseController.mine()" src="../assets/img/swiss-moon 1.png" alt="" class="img-fluid moon">
         </div>
       </div>
       <!-- CHEESE -->
@@ -40,21 +40,21 @@
         <div class="col-1 p-0 stats">
           <div
             class="p-2 d-flex bg-warning-dark justify-content-between border-top border-start border-warning rounded-top-start">
-            <span>+ 1</span>
+            <span>+ <span id="click-power">1</span></span>
             <span><i class="mdi mdi-cursor-pointer"></i></span>
           </div>
         </div>
         <div class="col-2 p-0 cheese">
           <div class="p-2 d-flex bg-warning justify-content-between rounded-top-end rounded-top-start">
             <span><i class="mdi mdi-cheese"></i></span>
-            <span>0</span>
+            <span id="cheese">0</span>
           </div>
         </div>
         <div class="col-1 p-0 stats">
           <div
             class="p-2 d-flex bg-warning-dark justify-content-between border-top border-end border-warning rounded-top-end">
             <span><i class="mdi mdi-timer-outline"></i></span>
-            <span>0</span>
+            <span id="auto-power">0</span>
           </div>
         </div>
       </div>
@@ -68,8 +68,9 @@
                   <div class="bungee mb-3">
                     Click Upgrades
                   </div>
-                  <div class="d-flex"><button class="btn btn-primary text-light mb-3 fs-4 fw-bold">50 <i
-                        class="mdi mdi-cheese"></i></button>
+                  <div class="d-flex"><button onclick="app.upgradesController.buyUpgrade('knife')"
+                      class="btn btn-primary text-light mb-3 fs-4 fw-bold">
+                      <span id="knife-price">50</span><i class="mdi mdi-cheese"></i></button>
                     <div class="ms-2">
                       <div>
                         Knife
@@ -79,7 +80,8 @@
                       </div>
                     </div>
                   </div>
-                  <div class="d-flex"><button class="btn btn-primary text-light mb-3 fs-4 fw-bold">250 <i
+                  <div class="d-flex"><button onclick="app.upgradesController.buyUpgrade('drill')"
+                      class="btn btn-primary text-light mb-3 fs-4 fw-bold"><span id="drill-price">50</span> <i
                         class="mdi mdi-cheese"></i></button>
                     <div class="ms-2">
                       <div>
@@ -96,7 +98,8 @@
                   <div class="bungee mb-3">
                     Automatic Upgrades
                   </div>
-                  <div class="d-flex"><button class="btn btn-danger text-light mb-3 fs-4 fw-bold">1k <i
+                  <div class="d-flex"><button onclick="app.upgradesController.buyUpgrade('mouse')"
+                      class="btn btn-danger text-light mb-3 fs-4 fw-bold"><span id="mouse-price">50</span> <i
                         class="mdi mdi-cheese"></i></button>
                     <div class="ms-2">
                       <div>
@@ -107,7 +110,8 @@
                       </div>
                     </div>
                   </div>
-                  <div class="d-flex"><button class="btn btn-danger text-light mb-3 fs-4 fw-bold">50k <i
+                  <div class="d-flex"><button onclick="app.upgradesController.buyUpgrade('spaceStation')"
+                      class="btn btn-danger text-light mb-3 fs-4 fw-bold"><span id="spaceStation-price">50</span> <i
                         class="mdi mdi-cheese"></i></button>
                     <div class="ms-2">
                       <div>
@@ -129,22 +133,22 @@
                   </div>
                   <div class="d-flex justify-content-between align-items-center mb-3">
                     <div class="d-flex justify-content-between">
-                      <span class="fs-4 border border-light rounded px-2">0</span>
+                      <span class="fs-4 border border-light rounded px-2" id="knife-quantity">0</span>
                       <span class="fs-5 ps-4">Knives</span>
                     </div>
                     <div class="d-flex justify-content-between me-2">
                       <span class="fs-4"> <i class="mdi mdi-arrow-right"></i></span>
-                      <span class="fs-4 ms-4 border border-light rounded px-2">0</span>
+                      <span class="fs-4 ms-4 border border-light rounded px-2" id="knife-power">0</span>
                     </div>
                   </div>
                   <div class="d-flex justify-content-between align-items-center mb-3">
                     <div class="d-flex justify-content-between">
-                      <span class="fs-4 border border-light rounded px-2">0</span>
+                      <span class="fs-4 border border-light rounded px-2" id="drill-quantity">0</span>
                       <span class="fs-5 ps-4">Drills</span>
                     </div>
                     <div class="d-flex justify-content-between me-2">
                       <span class="fs-4"> <i class="mdi mdi-arrow-right"></i></span>
-                      <span class="fs-4 ms-4 border border-light rounded px-2">0</span>
+                      <span class="fs-4 ms-4 border border-light rounded px-2" id="drill-power">0</span>
                     </div>
                   </div>
                 </div>
@@ -154,22 +158,22 @@
                   </div>
                   <div class="d-flex justify-content-between align-items-center mb-3">
                     <div class="d-flex justify-content-between">
-                      <span class="fs-4 border border-light rounded px-2">0</span>
-                      <span class="fs-5 ps-4">Knives</span>
+                      <span class="fs-4 border border-light rounded px-2" id="mouse-quantity">0</span>
+                      <span class="fs-5 ps-4">Mousetronauts</span>
                     </div>
                     <div class="d-flex justify-content-between me-2">
                       <span class="fs-4"> <i class="mdi mdi-timer-outline"></i></span>
-                      <span class="fs-4 ms-4 border border-light rounded px-2">0</span>
+                      <span class="fs-4 ms-4 border border-light rounded px-2" id="mouse-power">0</span>
                     </div>
                   </div>
                   <div class="d-flex justify-content-between align-items-center mb-3">
                     <div class="d-flex justify-content-between">
-                      <span class="fs-4 border border-light rounded px-2">0</span>
-                      <span class="fs-5 ps-4">Drills</span>
+                      <span class="fs-4 border border-light rounded px-2" id="spaceStation-quantity">0</span>
+                      <span class="fs-5 ps-4">Space Stations</span>
                     </div>
                     <div class="d-flex justify-content-between me-2">
                       <span class="fs-4"> <i class="mdi mdi-timer-outline"></i></span>
-                      <span class="fs-4 ms-4 border border-light rounded px-2">0</span>
+                      <span class="fs-4 ms-4 border border-light rounded px-2" id="spaceStation-power">0</span>
                     </div>
                   </div>
                 </div>
