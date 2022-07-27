@@ -32,7 +32,7 @@
     <div class="container-fluid">
       <div class="row justify-content-center">
         <div class="col-5 d-flex justify-content-center">
-          <img src="../assets/img/swiss-moon 1.png" alt="" class="img-fluid moon">
+          <img onclick="app.cheeseController.mine()" src="../assets/img/swiss-moon 1.png" alt="" class="img-fluid moon">
         </div>
       </div>
       <!-- CHEESE -->
@@ -47,7 +47,7 @@
         <div class="col-2 p-0 cheese">
           <div class="p-2 d-flex bg-warning justify-content-between rounded-top-end rounded-top-start">
             <span><i class="mdi mdi-cheese"></i></span>
-            <span>0</span>
+            <span id="cheese-total">0</span>
           </div>
         </div>
         <div class="col-1 p-0 stats">
@@ -68,7 +68,8 @@
                   <div class="bungee mb-3">
                     Click Upgrades
                   </div>
-                  <div class="d-flex"><button class="btn btn-primary text-light mb-3 fs-4 fw-bold">50 <i
+                  <div class="d-flex"><button onclick="app.upgradesController.buyUpgrade('knife')"
+                      class="btn btn-primary text-light mb-3 fs-4 fw-bold"><span id="knife-price"></span> <i
                         class="mdi mdi-cheese"></i></button>
                     <div class="ms-2">
                       <div>
@@ -79,11 +80,12 @@
                       </div>
                     </div>
                   </div>
-                  <div class="d-flex"><button class="btn btn-primary text-light mb-3 fs-4 fw-bold">250 <i
+                  <div class="d-flex"><button onclick="app.upgradesController.findMouse('big mouse')"
+                      class="btn btn-primary text-light mb-3 fs-4 fw-bold"><span id="drill-price"></span> <i
                         class="mdi mdi-cheese"></i></button>
                     <div class="ms-2">
                       <div>
-                        Drill
+                        Big Mouse
                       </div>
                       <div>
                         +5
@@ -96,8 +98,8 @@
                   <div class="bungee mb-3">
                     Automatic Upgrades
                   </div>
-                  <div class="d-flex"><button class="btn btn-danger text-light mb-3 fs-4 fw-bold">1k <i
-                        class="mdi mdi-cheese"></i></button>
+                  <div class="d-flex"><button class="btn btn-danger text-light mb-3 fs-4 fw-bold"><span
+                        id="mouse-price"></span> <i class="mdi mdi-cheese"></i></button>
                     <div class="ms-2">
                       <div>
                         Mousetronaut
@@ -107,8 +109,8 @@
                       </div>
                     </div>
                   </div>
-                  <div class="d-flex"><button class="btn btn-danger text-light mb-3 fs-4 fw-bold">50k <i
-                        class="mdi mdi-cheese"></i></button>
+                  <div class="d-flex"><button class="btn btn-danger text-light mb-3 fs-4 fw-bold"><span
+                        id="station-price"></span> <i class="mdi mdi-cheese"></i></button>
                     <div class="ms-2">
                       <div>
                         Space Station
