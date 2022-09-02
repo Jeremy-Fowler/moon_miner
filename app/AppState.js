@@ -2,7 +2,7 @@ import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
 class AppState extends EventEmitter {
-  cheese = 100000
+  cheese = 10000
   upgrades = {
     knife: {
       price: 50,
@@ -23,7 +23,7 @@ class AppState extends EventEmitter {
       type: 'auto'
     },
     spaceStation: {
-      price: 50000,
+      price: 5000,
       multiplier: 100,
       quantity: 0,
       type: 'auto'
