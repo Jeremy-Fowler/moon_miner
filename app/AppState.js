@@ -4,7 +4,7 @@ import { createObservableProxy } from './utils/ObservableProxy.js'
 
 class ObservableAppState extends EventEmitter {
 
-  cheese = 0
+  cheese = 100000
   /** @type {Upgrade[]} */
   clickUpgrades = [
     new Upgrade('knife', 1, 50, 'click'),

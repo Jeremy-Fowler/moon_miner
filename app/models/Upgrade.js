@@ -37,7 +37,7 @@ export class Upgrade {
         <span class="text-capitalize">${this.name}</span>
       </p>
       <p>
-        <i class="mdi mdi-arrow-right-thick"></i>
+        <i class="mdi mdi-${this.type == 'click' ? 'arrow-right-thick' : 'timer-outline'}"></i>
         <span class="upgradeNumber ms-2">${this.totalPower}</span>
       </p>
     </div>
