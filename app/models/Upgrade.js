@@ -18,7 +18,7 @@ export class Upgrade {
   get purchaseButtonHTMLTemplate() {
     return `
     <div class="d-flex gap-3 mb-2">
-      <button onclick="app.upgradesController.purchaseUpgrade('${this.name}', '${this.type}')" class="btn btn-${this.type == 'click' ? 'primary' : 'danger'} fs-1" ${AppState.cheese < this.price ? 'disabled' : ''}>
+      <button onclick="app.upgradesController.purchaseUpgrade('${this.name}', '${this.type}')" class="btn btn-${this.type == 'click' ? 'primary' : 'danger'} fs-3" ${AppState.cheese < this.price ? 'disabled' : ''}>
         ${this.price} <i class="mdi mdi-cheese"></i>
       </button>
       <p class="fs-5 text-capitalize">
