@@ -7,7 +7,6 @@ class CheeseService {
   }
   mineCheese() {
     AppState.cheese += Upgrade.calculateUpgradesPower('click')
-    console.log(AppState.cheese);
   }
 
   #collectAuto() {

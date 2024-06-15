@@ -2,10 +2,13 @@ import { AppState } from "../AppState.js"
 
 class UpgradesService {
   purchaseUpgrade(upgradeName, upgradeType) {
-    const upgrade = AppState[upgradeType + 'Upgrades'].find(upgrade => upgrade.name == upgradeName)
+    const upgradeArray = AppState[upgradeType + 'Upgrades']
+    if (!upgradeArray) return
 
-    if (!upgrade) throw new Error(`Invalid upgrade name: ${upgradeName}`)
-    if (upgrade.price > AppState.cheese) throw new Error(`${upgrade.name} costs ${upgrade.price}, you only have ${AppState.cheese}`)
+    const upgrade = upgradeArray.find(upgrade => upgrade.name == upgradeName)
+    if (!upgrade) return
+
+    if (upgrade.price > AppState.cheese) return
 
     AppState.cheese -= upgrade.price
     upgrade.quantity++

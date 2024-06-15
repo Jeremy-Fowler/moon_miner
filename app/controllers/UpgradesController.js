@@ -15,11 +15,13 @@ export class UpgradesController {
     this.#drawClickUpgrades()
   }
   #drawAutoUpgrades() {
-    document.getElementById('autoUpgrades').innerHTML = AppState.autoUpgrades.map(upgrade => upgrade.purchaseButtonHTMLTemplate).join()
+    document.getElementById('autoUpgrades').innerHTML = AppState.autoUpgrades.map(upgrade => upgrade.purchaseButtonHTMLTemplate).join('')
+    document.getElementById('autoStats').innerHTML = AppState.autoUpgrades.map(upgrade => upgrade.statsHTMLTemplate).join('')
     document.querySelector('#autoPower span').innerHTML = '+' + Upgrade.calculateUpgradesPower('auto')
   }
   #drawClickUpgrades() {
-    document.getElementById('clickUpgrades').innerHTML = AppState.clickUpgrades.map(upgrade => upgrade.purchaseButtonHTMLTemplate).join()
+    document.getElementById('clickUpgrades').innerHTML = AppState.clickUpgrades.map(upgrade => upgrade.purchaseButtonHTMLTemplate).join('')
+    document.getElementById('clickStats').innerHTML = AppState.clickUpgrades.map(upgrade => upgrade.statsHTMLTemplate).join('')
     document.querySelector('#clickPower span').innerHTML = '+' + Upgrade.calculateUpgradesPower('click')
   }
 
