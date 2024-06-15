@@ -1,8 +1,8 @@
 import { AppState } from "../AppState.js"
 
 class UpgradesService {
-  purchaseUpgrade(upgradeName) {
-    const upgrade = [...AppState.autoUpgrades, ...AppState.clickUpgrades].find(upgrade => upgrade.name == upgradeName)
+  purchaseUpgrade(upgradeName, upgradeType) {
+    const upgrade = AppState[upgradeType + 'Upgrades'].find(upgrade => upgrade.name == upgradeName)
 
     if (!upgrade) throw new Error(`Invalid upgrade name: ${upgradeName}`)
     if (upgrade.price > AppState.cheese) throw new Error(`${upgrade.name} costs ${upgrade.price}, you only have ${AppState.cheese}`)

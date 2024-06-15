@@ -23,7 +23,7 @@ export class UpgradesController {
     document.querySelector('#clickPower span').innerHTML = '+' + Upgrade.calculateUpgradesPower('click')
   }
 
-  purchaseUpgrade(upgradeName) {
-    upgradesService.purchaseUpgrade(upgradeName)
+  purchaseUpgrade(upgradeName, upgradeType) {
+    upgradesService.purchaseUpgrade(upgradeName, upgradeType)
   }
 }
