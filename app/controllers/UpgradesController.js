@@ -5,9 +5,9 @@ import { setHTML } from "../utils/Writer.js";
 
 export class UpgradesController {
   constructor() {
-    AppState.on('clickUpgrades', this.#drawClickUpgrades.bind(this))
-    AppState.on('autoUpgrades', this.#drawAutoUpgrades.bind(this))
-    AppState.on('cheese', this.#drawUpgrades.bind(this))
+    AppState.on('clickUpgrades', this.#drawClickUpgrades, this)
+    AppState.on('autoUpgrades', this.#drawAutoUpgrades, this)
+    AppState.on('cheese', this.#drawUpgrades, this)
     this.#drawUpgrades()
   }
 
