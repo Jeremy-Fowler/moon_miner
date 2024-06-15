@@ -1,0 +1,52 @@
+/* BASIC STYLES HERE */
+:root {
+  --colby-jack: #FCBA0F;
+  --cheddar: #FFAA47;
+}
+
+* {
+  color: white;
+}
+
+h1 {
+  text-shadow: 0 .3rem var(--colby-jack), 0 .4rem 1rem black;
+}
+
+img {
+  user-select: none;
+}
+
+.shop-box {
+  background-color: var(--cheddar);
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+#shop {
+  background-color: var(--colby-jack);
+  border-radius: 15px;
+}
+
+#stats>* {
+  padding: 1rem;
+  text-shadow: 1px 1px 6px black;
+}
+
+#clickPower,
+#autoPower {
+  min-width: 7%;
+  background-color: var(--cheddar);
+}
+
+#clickPower {
+  border-top-left-radius: 15px;
+}
+
+#autoPower {
+  border-top-right-radius: 15px;
+}
+
+#cheese {
+  background-color: var(--colby-jack);
+  border-radius: 15px 15px 0 0;
+}
