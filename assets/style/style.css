@@ -13,6 +13,14 @@ h1 {
   text-shadow: 0 .3rem var(--colby-jack), 0 .4rem 1rem black;
 }
 
+h1,
+h2,
+h3 {
+  font-family: "Bungee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 img {
   user-select: none;
 }
