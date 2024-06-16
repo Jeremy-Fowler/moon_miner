@@ -25,6 +25,10 @@ img {
   user-select: none;
 }
 
+body {
+  background-image: url(/assets/img/Nebula.png);
+}
+
 .shop-box {
   background-color: var(--cheddar);
   padding: 1rem;
